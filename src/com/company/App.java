@@ -101,7 +101,7 @@ public class App {
     public void sortByLastCharOfLastName2(){
         Stream<Human> stream = human_list.stream();
         List <Human> m = stream.sorted(Comparator.comparingInt(name -> name.getLastName().charAt(name.returnLen(name.getLastName()) - 1))).collect(Collectors.toList());
-        System.out.println(m);
+        printAll(m);
         //.map(name -> name.getLastName())
     }
     public void printAll(List<Human> list)
